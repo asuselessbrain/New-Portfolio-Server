@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
+import { contactServices } from "./contact.services";
 
 const createContact = async(req: Request, res: Response) => {
-    const result = await contactServices.cresteContactInDB(req.body);
+    const result = await contactServices.createContactInDB(req.body);
 
     res.send(
         {
@@ -12,6 +13,6 @@ const createContact = async(req: Request, res: Response) => {
     )
 }
 
-export default contactController = {
+export const contactController = {
     createContact
 }
